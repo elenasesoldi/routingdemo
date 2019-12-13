@@ -1,0 +1,9 @@
+div {
+    width: fit-content;
+    h1, h3 {
+    text-align: center;    
+    }
+    &, * {
+        margin: 10px;
+    }
+}

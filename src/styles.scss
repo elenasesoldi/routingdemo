@@ -1,1 +1,161 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+$grey: #607d8b;
+$blue: #1da1f2;
+$pink: #ff0090;
+
+$grey_blue: mix($grey, $blue, 50%);
+$grey_pink: mix($grey, $pink, 50%);
+
+$light_grey: lighten($grey, 50%);
+$light_blue: lighten($blue, 35%);
+$light_pink: lighten($pink, 50%);
+$light_grey_blue: lighten($grey_blue, 50%);
+$light_grey_pink: lighten($grey_pink, 50%);
+
+
+.title {
+    &.primary {
+        color: $pink;
+    }
+    &.secondary {
+        color: $blue;
+    }    
+}
+.subtitle {
+    &.primary {
+        color: $grey_pink;
+    }
+    &.secondary {
+        color: $grey_blue;
+    }    
+}
+
+#app-component {
+    background: $light_grey_pink;
+    h1, h3 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+nav {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+
+    &#navigation {
+        background: $light_grey;
+    }
+    a {
+        margin: 10px;
+        padding: 3px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large; 
+        color: $grey;
+
+        &:hover {
+            color: $grey_blue;         
+        }
+        &:active {
+            color: $blue;
+            border-color: $blue;
+        }
+
+       &.active {
+            color: $pink;            
+        }
+    }
+}
+
+.flex {
+    display: flex;
+    .mat-icon {
+        margin: auto 0;
+        font-weight: bold;
+    }
+}
+
+h3.title.secondary.items-h3 {
+    width: 30%;
+    text-align: center;
+    a {
+        font-size: small;
+    }
+}
+
+.items-back {
+    width: 10%;
+}
+
+.items-nav {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+    &.items {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &.employee {
+            li {
+                cursor: auto;
+            }
+        }
+        li {
+            &.selected {
+                div {
+                    background: $light_blue;
+                }
+            }
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            margin: 2px;
+            border-radius: 10px;
+            cursor: pointer;           
+            div{
+                background: $light_grey;
+                width: 80%;
+                display: flex;
+                box-shadow: inset 0 0 5px $grey; 
+                span {
+                    height: fit-content;
+                    margin: auto;
+                }
+                &.badge {
+                    background: $grey_blue;
+                    color: white;      
+                    width: 20%;   
+                    padding: 10px;
+                    box-shadow: inset 0 0 5px $blue;                     
+                }
+            }
+            
+        }
+        
+    }
+}
+
+#contact {
+    a {
+        color: $grey;
+        &:hover {
+            color: $grey_pink;
+        }
+        &:active {
+            color: $pink;
+        }
+    }
+}
+
+

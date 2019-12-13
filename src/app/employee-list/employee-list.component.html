@@ -1,0 +1,7 @@
+<h3 class="title secondary items-h3">Employee List</h3>
+<ul class="items employee">
+    <li *ngFor="let e of employees" id="{{'emp' + e.id}}">
+        <div class="badge"><span>{{e.id}}</span></div> 
+        <div><span>{{e.name}}, age {{e.age}}</span></div>
+    </li>
+</ul>
